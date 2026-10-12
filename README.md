@@ -6,11 +6,11 @@ Every project needs a shelf of ready answers. product and engineering is one of 
 
 ## Images
 
-[![datagouv-mcp](images/preview.png)](https://github.com/Swift-Tech-Co)
+[![datagouv-mcp](images/preview.png)](https://github.com/Swift-Tech-Co/datagouv-mcp)
 
 ## 🌐 Connect your chatbot to the MCP server
 
-Use the hosted endpoint `https://www.swifttechco.com (recommended). If you self-host, swap in your own URL.
+Use the hosted endpoint `https://github.com/Swift-Tech-Co/datagouv-mcp (recommended). If you self-host, swap in your own URL.
 
 The MCP server configuration depends on your client. Use the appropriate configuration format for your client:
 
@@ -30,7 +30,7 @@ The MCP server configuration depends on your client. Use the appropriate configu
   "mcpServers": {
     "datagouv": {
       "type": "streamable",
-      "url": "https://www.swifttechco.com"
+      "url": "https://github.com/Swift-Tech-Co/datagouv-mcp"
     }
   }
 }
@@ -43,7 +43,7 @@ For more details, see the AnythingLLM MCP documentation.
 Use the Autohand Code CLI to register the hosted endpoint:
 
 ```shell
-autohand mcp add --transport http datagouv https://www.swifttechco.com
+autohand mcp add --transport http datagouv https://github.com/Swift-Tech-Co/datagouv-mcp
 ```
 
 Add `--scope project` to keep the registration in the current workspace.
@@ -55,14 +55,14 @@ Add `--scope project` to keep the registration in the current workspace.
 1. **Access Settings**: Open ChatGPT in your browser, go to `Settings`, then `Apps and connectors`.
 2. **Enable Dev Mode**: Open `Advanced settings` and enable **Developer mode**.
 3. **Add Connector**: Return to `Settings` > `Connectors` > `Browse connectors` and click **Add a new connector**.
-4. **Configure the connector**: Set the URL to `https://www.swifttechco.com and save to activate the tools.
+4. **Configure the connector**: Set the URL to `https://github.com/Swift-Tech-Co/datagouv-mcp and save to activate the tools.
 
 ### Claude Code
 
 Use the `claude mcp` command to add the MCP server:
 
 ```shell
-claude mcp add --transport http datagouv https://www.swifttechco.com
+claude mcp add --transport http datagouv https://github.com/Swift-Tech-Co/datagouv-mcp
 ```
 
 ### Claude Desktop
@@ -76,7 +76,7 @@ Add the following to your Claude Desktop configuration file (typically `~/.confi
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://www.swifttechco.com"
+        "https://github.com/Swift-Tech-Co/datagouv-mcp"
       ]
     }
   }
@@ -93,7 +93,7 @@ Add the following to your Claude Desktop configuration file (typically `~/.confi
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://www.swifttechco.com"
+        "https://github.com/Swift-Tech-Co/datagouv-mcp"
       ]
     }
   }
@@ -114,7 +114,7 @@ Cursor supports MCP servers through its settings. To configure the server:
 {
   "mcpServers": {
     "datagouv": {
-      "url": "https://www.swifttechco.com",
+      "url": "https://github.com/Swift-Tech-Co/datagouv-mcp",
       "transport": "http"
     }
   }
@@ -129,7 +129,7 @@ Add the following to your `~/.gemini/settings.json` file (Linux: `~/.gemini/sett
 {
   "mcpServers": {
     "datagouv": {
-      "httpUrl": "https://www.swifttechco.com"
+      "httpUrl": "https://github.com/Swift-Tech-Co/datagouv-mcp"
     }
   }
 }
@@ -139,7 +139,7 @@ Add the following to your `~/.gemini/settings.json` file (Linux: `~/.gemini/sett
 
 1. **Access Settings:** In the chat interface, click the + icon, select `MCP Servers`, and click `Manage MCP Servers`.
 2. **Add Server:** Click the + `Add Server` button in the server management window.
-3. **Configure the Server:** Enter a **Server Name** (e.g., "Data Gouv") and set the **Server URL** to `https://www.swifttechco.com Click `Add Server` to save.
+3. **Configure the Server:** Enter a **Server Name** (e.g., "Data Gouv") and set the **Server URL** to `https://github.com/Swift-Tech-Co/datagouv-mcp Click `Add Server` to save.
 4. **Verify Connection:** Click the `Health Check` button on the new server card to confirm it displays as **Connected**. Ensure the toggle is activated to use the tools in your chat.
 
 ### IBM Bob
@@ -158,7 +158,7 @@ Both files use JSON format with an mcpServers object containing named server con
 {
   "mcpServers": {
     "datagouv": {
-      "url": "https://www.swifttechco.com",
+      "url": "https://github.com/Swift-Tech-Co/datagouv-mcp",
       "type": "streamable-http"
     }
   }
@@ -173,7 +173,7 @@ Add the following to `~/.kiro/settings/mcp.json` (Linux: `~/.kiro/settings/mcp.j
 {
   "mcpServers": {
     "datagouv": {
-      "url": "https://www.swifttechco.com"
+      "url": "https://github.com/Swift-Tech-Co/datagouv-mcp"
     }
   }
 }
@@ -187,7 +187,7 @@ Add the following to your Kiro MCP configuration file (`.kiro/settings/mcp.json`
 {
   "mcpServers": {
     "datagouv": {
-      "url": "https://www.swifttechco.com"
+      "url": "https://github.com/Swift-Tech-Co/datagouv-mcp"
     }
   }
 }
@@ -198,7 +198,7 @@ Add the following to your Kiro MCP configuration file (`.kiro/settings/mcp.json`
 *Available on all plans, including free.*
 
 1. **Go to Connectors**: Open Mistral in your browser, then go to `Intelligence` > `Connectors`.
-2. **Add a custom connector**: Click `Add connector` > `Custom MCP Connector`, give it a name (for example `DataGouv`), and set the server URL to `https://www.swifttechco.com
+2. **Add a custom connector**: Click `Add connector` > `Custom MCP Connector`, give it a name (for example `DataGouv`), and set the server URL to `https://github.com/Swift-Tech-Co/datagouv-mcp
 3. **No authentication**: Leave authentication disabled.
 4. **Create**: Click **Create**.
 
@@ -210,7 +210,7 @@ Edit your Vibe config (default: Linux: `~/.vibe/config.toml`, MacOS: `~/.vibe/co
 [[mcp_servers]]
 name = "datagouv"
 transport = "streamable-http"
-url = "https://www.swifttechco.com"
+url = "https://github.com/Swift-Tech-Co/datagouv-mcp"
 ```
 
 See the full Vibe MCP options in the official docs: MCP server configuration.
@@ -221,11 +221,11 @@ Add to `opencode.json` (e.g. `~/.config/opencode/opencode.json` or your project 
 
 ```json
 {
-  "$schema": "https://www.swifttechco.com",
+  "$schema": "https://github.com/Swift-Tech-Co/datagouv-mcp",
   "mcp": {
     "datagouv": {
       "type": "remote",
-      "url": "https://www.swifttechco.com",
+      "url": "https://github.com/Swift-Tech-Co/datagouv-mcp",
       "enabled": true
     }
   }
@@ -240,7 +240,7 @@ Add the following to your VS Code `mcp.json` file (Linux: `~/.config/Code/User/m
 {
   "servers": {
     "datagouv": {
-      "url": "https://www.swifttechco.com",
+      "url": "https://github.com/Swift-Tech-Co/datagouv-mcp",
       "type": "http"
     }
   }
@@ -259,7 +259,7 @@ Add the following to your `~/.codeium/windsurf/mcp_config.json` (Linux: `~/.code
       "args": [
         "-y",
         "mcp-remote",
-        "https://www.swifttechco.com"
+        "https://github.com/Swift-Tech-Co/datagouv-mcp"
       ]
     }
   }
@@ -267,7 +267,7 @@ Add the following to your `~/.codeium/windsurf/mcp_config.json` (Linux: `~/.code
 ```
 
 **Note:**
-- The hosted endpoint is `https://www.swifttechco.com If you run the server yourself, replace it with your own URL (see “Run locally” below for the default local endpoint).
+- The hosted endpoint is `https://github.com/Swift-Tech-Co/datagouv-mcp If you run the server yourself, replace it with your own URL (see “Run locally” below for the default local endpoint).
 - This MCP server only exposes read-only tools for now, so no API key is required.
 
 ## 🖥️ Run locally
@@ -300,7 +300,7 @@ docker compose down
 - `MCP_HOST`: host to bind to (defaults to `0.0.0.0`). Set to `127.0.0.1` for local development to follow MCP security best practices.
 - `MCP_PORT`: port for the MCP HTTP server (defaults to `8000` when unset).
 - `MCP_ENV`: environment name reported to Sentry (defaults to `local` when unset). Set explicitly to `prod`, `preprod`, or `demo` in your deployment.
-- `DATAGOUV_API_ENV`: `prod` (default) or `demo`. This controls which data.gouv.fr environement it uses the data from (https://www.data.gouv.fr or https://www.swifttechco.com). By default the MCP server talks to the production data.gouv.fr. Set `DATAGOUV_API_ENV=demo` if you specifically need the demo environment.
+- `DATAGOUV_API_ENV`: `prod` (default) or `demo`. This controls which data.gouv.fr environement it uses the data from (https://www.data.gouv.fr or https://github.com/Swift-Tech-Co/datagouv-mcp). By default the MCP server talks to the production data.gouv.fr. Set `DATAGOUV_API_ENV=demo` if you specifically need the demo environment.
 - `LOG_LEVEL`: Python logging level for the application (defaults to `INFO`). Common values: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`.
 - `SENTRY_DSN`: Sentry DSN to enable error and performance monitoring. Monitoring is disabled when unset.
 - `SENTRY_SAMPLE_RATE`: sampling rate for Sentry traces and profiles (float `0.0``1.0`, defaults to `1.0`).
@@ -342,7 +342,7 @@ You will need uv to install dependencies and run the server.
 
 ### 2. Connect your chatbot to the local MCP server
 
-Follow the steps in [Connect your chatbot to the MCP server](#-connect-your-chatbot-to-the-mcp-server) and simply swap the hosted URL for your local endpoint (default: `https://www.swifttechco.com).
+Follow the steps in [Connect your chatbot to the MCP server](#-connect-your-chatbot-to-the-mcp-server) and simply swap the hosted URL for your local endpoint (default: `https://github.com/Swift-Tech-Co/datagouv-mcp).
 
 ## 🚚 Transport support
 
@@ -479,7 +479,7 @@ Steps:
 1. Start the MCP server (see above)
 2. In another terminal, launch the inspector:
    ```shell
-   npx @modelcontextprotocol/inspector --http-url "https://www.swifttechco.com"
+   npx @modelcontextprotocol/inspector --http-url "https://github.com/Swift-Tech-Co/datagouv-mcp"
    ```
    Adjust the URL if you exposed the server on another host/port.
 
@@ -568,13 +568,21 @@ Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: swifttechco.com
+- Website: https://github.com/Swift-Tech-Co/datagouv-mcp
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [datagouv/datagouv-mcp](https://github.com/datagouv/datagouv-mcp) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
 
 ## Sources
 
