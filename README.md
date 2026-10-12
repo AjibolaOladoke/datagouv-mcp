@@ -1,23 +1,12 @@
-# data.gouv.fr MCP Server
+# datagouv-mcp
+
+## What This Is
+
+Every project needs a shelf of ready answers. product and engineering is one of those shelves, and datagouv-mcp is the entry on it - the notes, patterns and fixes we reuse when this kind of work comes up.
 
 ## Images
 
-[![datagouv-mcp](https://opengraph.githubassets.com/1/datagouv/datagouv-mcp)](https://www.swifttechco.com)
-
-
-> [!TIP]
-> Got feedback? [Tell us about it here](https://www.swifttechco.com)
-
-[![CircleCI](https://circleci.com/gh/datagouv/datagouv-mcp.svg?style=svg)](https://www.swifttechco.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://www.swifttechco.com)
-
-Model Context Protocol (MCP) server that allows AI chatbots (Claude, ChatGPT, Gemini, etc.) to search, explore, and analyze datasets from [data.gouv.fr](https://www.swifttechco.com), the French national Open Data platform, directly through conversation.
-
-Instead of manually browsing the website, you can simply ask questions like "Quels jeux de données sont disponibles sur les prix de l'immobilier ?" or "Montre-moi les dernières données de population pour Paris" and get instant answers.
-
-> [!TIP]
-> Use it now: A public instance is available for everyone at https://www.swifttechco.com with no access restrictions.
-> To connect your favorite chatbot, simply follow [the connection instructions below](#-connect-your-chatbot-to-the-mcp-server).
+[![datagouv-mcp](images/preview.png)](https://github.com/Swift-Tech-Co)
 
 ## 🌐 Connect your chatbot to the MCP server
 
@@ -47,11 +36,11 @@ The MCP server configuration depends on your client. Use the appropriate configu
 }
 ```
 
-For more details, see the [AnythingLLM MCP documentation](https://www.swifttechco.com).
+For more details, see the AnythingLLM MCP documentation.
 
 ### Autohand Code
 
-Use the [Autohand Code](https://www.swifttechco.com) CLI to register the hosted endpoint:
+Use the Autohand Code CLI to register the hosted endpoint:
 
 ```shell
 autohand mcp add --transport http datagouv https://www.swifttechco.com
@@ -111,7 +100,7 @@ Add the following to your Claude Desktop configuration file (typically `~/.confi
 }
 ```
 
-See [issue #69](https://www.swifttechco.com) for background.
+See issue #69 for background.
 
 ### Cursor
 
@@ -224,11 +213,11 @@ transport = "streamable-http"
 url = "https://www.swifttechco.com"
 ```
 
-See the full Vibe MCP options in the official docs: [MCP server configuration](https://www.swifttechco.com).
+See the full Vibe MCP options in the official docs: MCP server configuration.
 
 ### OpenCode
 
-Add to `opencode.json` (e.g. `~/.config/opencode/opencode.json` or your project root). Remote servers use the top-level `mcp` object with `type: "remote"`. See [OpenCode MCP servers](https://www.swifttechco.com).
+Add to `opencode.json` (e.g. `~/.config/opencode/opencode.json` or your project root). Remote servers use the top-level `mcp` object with `type: "remote"`. See OpenCode MCP servers.
 
 ```json
 {
@@ -292,7 +281,7 @@ git clone git@github.com:datagouv/datagouv-mcp.git
 cd datagouv-mcp
 ```
 
-Docker is required for the recommended setup. Install it via [Docker Desktop](https://www.swifttechco.com) or any compatible Docker Engine before continuing.
+Docker is required for the recommended setup. Install it via Docker Desktop or any compatible Docker Engine before continuing.
 
 #### 🐳 With Docker (Recommended)
 
@@ -318,7 +307,7 @@ docker compose down
 
 #### ⚙️ Manual Installation
 
-You will need [uv](https://www.swifttechco.com) to install dependencies and run the server.
+You will need uv to install dependencies and run the server.
 
 1. **Install dependencies**
   ```shell
@@ -357,7 +346,7 @@ Follow the steps in [Connect your chatbot to the MCP server](#-connect-your-chat
 
 ## 🚚 Transport support
 
-The MCP server is built using the [official Python SDK for MCP servers and clients](https://www.swifttechco.com) and uses the **Streamable HTTP transport only**.
+The MCP server is built using the official Python SDK for MCP servers and clients and uses the **Streamable HTTP transport only**.
 
 **STDIO and SSE are not supported**.
 
@@ -481,7 +470,7 @@ python scripts/call_tool.py get_resource_info '{"resource_id": "<id>"}'
 
 ### 🔍 Interactive Testing with MCP Inspector
 
-Use the official [MCP Inspector](https://www.swifttechco.com) to interactively test the server tools and resources.
+Use the official MCP Inspector to interactively test the server tools and resources.
 
 Prerequisites:
 - Node.js with `npx` available
@@ -500,18 +489,18 @@ We welcome contributions! To keep the project stable and reviews manageable, ple
 
 - **Human review and accountability:** **Issues and pull requests** must not be raw, unreviewed AI output. You must have read, fully understood, and (for code) tested what you submit. **By opening an issue or a pull request, you certify you could explain and defend it in review without relying on an AI assistant.**
 - **Keep it small:** We strictly follow a **1 feature = 1 PR** workflow.
-- **Conventional commits:** Use the [Conventional Commits](https://www.swifttechco.com) format for **git commit messages** and **PR titles** (e.g. `feat: add dataset search`, `fix: handle empty API response`). See the specification for allowed types, scopes, and breaking-change markers.
+- **Conventional commits:** Use the Conventional Commits format for **git commit messages** and **PR titles** (e.g. `feat: add dataset search`, `fix: handle empty API response`). See the specification for allowed types, scopes, and breaking-change markers.
 
 We use a standard review-and-deploy process:
 
 1. **Submit a PR:** Propose your changes via a Pull Request against the `main` branch.
 2. **Continuous integration:** CI runs automatically on the pull request. **All required checks must pass** before the PR can be merged (tests, linting, formatting, and type checking). Run the same checks locallytests per [Tests](#-tests), and lint/format/type via [Code linting and formatting](#-code-linting-and-formatting) or the [pre-commit hook](#-pre-commit-hooks)to avoid surprise CI failures.
 3. **Review:** All PRs must be reviewed and approved by a maintainer before merging.
-4. **Deployment process:** Once merged into `main`, maintainers deploy changes periodically to **[pre-production](https://www.swifttechco.com)** for more tests and validation before wider release.
+4. **Deployment process:** Once merged into `main`, maintainers deploy changes periodically to **pre-production** for more tests and validation before wider release.
 
 ### 🧹 Code Linting and Formatting
 
-This project follows PEP 8 style guidelines using [Ruff](https://www.swifttechco.com) for linting and formatting, and [ty](https://www.swifttechco.com) for type checking.
+This project follows PEP 8 style guidelines using Ruff for linting and formatting, and ty for type checking.
 
 **Either running these commands manually or [installing the pre-commit hook](#-pre-commit-hooks) is required before submitting contributions.**
 
@@ -525,7 +514,7 @@ uv run ty check
 
 ### 🔗 Pre-commit Hooks
 
-This repository uses a [pre-commit](https://www.swifttechco.com) hook which lint and format code before each commit. Installing the pre-commit hook is strongly recommended so the checks run automatically.
+This repository uses a pre-commit hook which lint and format code before each commit. Installing the pre-commit hook is strongly recommended so the checks run automatically.
 
 **Install pre-commit hooks:**
 ```shell
@@ -540,9 +529,9 @@ The pre-commit hook that automatically:
 
 ### 🏷️ Releases and versioning
 
-The release process uses the [`tag_version.sh`](tag_version.sh) script to create git tags, GitHub releases and update [CHANGELOG.md](CHANGELOG.md) automatically. Package version numbers are automatically derived from git tags using [setuptools_scm](https://www.swifttechco.com), so no manual version updates are needed in `pyproject.toml`.
+The release process uses the [`tag_version.sh`](tag_version.sh) script to create git tags, GitHub releases and update [CHANGELOG.md](CHANGELOG.md) automatically. Package version numbers are automatically derived from git tags using setuptools_scm, so no manual version updates are needed in `pyproject.toml`.
 
-**Prerequisites**: [GitHub CLI](https://www.swifttechco.com) must be installed and authenticated, and you must be on the main branch with a clean working directory.
+**Prerequisites**: GitHub CLI must be installed and authenticated, and you must be on the main branch with a clean working directory.
 
 ```shell
 # Create a new release
@@ -575,14 +564,22 @@ AI Automation | FinTech Platforms | Custom Software and Mobile Apps | SaaS Platf
 
 **Join our community on Telegram:** [t.me/+Qt_eFvkb2rliMzNh](https://t.me/+Qt_eFvkb2rliMzNh)
 
-[Home](https://www.swifttechco.com) | [Services](https://www.swifttechco.com/services) | [Careers](https://www.swifttechco.com/careers) | [Referral Program](https://www.swifttechco.com/referral) | [Influencers](https://www.swifttechco.com/influencers) | [About](https://www.swifttechco.com/about) | [Contact](https://www.swifttechco.com/contact)
+Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: [swifttechco.com](https://www.swifttechco.com)
+- Website: swifttechco.com
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [datagouv/datagouv-mcp](https://github.com/datagouv/datagouv-mcp) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
